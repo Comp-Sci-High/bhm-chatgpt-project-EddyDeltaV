@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHMPA - Black History Month & Anime</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo">BHMPA</h1>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-item">Home</a></li>
+            <li><a href="#" class="nav-item">About</a></li>
+            <li><a href="#" class="nav-item">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header class="hero">
+        <h2>Anime & Animation's Impact on Black History</h2>
+    </header>
+    
+    <section class="cards-container">
+        <div class="card" id="culture">
+            <img src="https://www.creativefabrica.com/wp-content/uploads/2023/02/14/Musician-Woman-Video-Game-Art-Anime-Art-Style-African-American-61228874-1.png" alt="Cultural Influence" class="card-img" onclick="changeImage('culture')">
+            <h3 class="hover-text">Cultural Influence</h3>
+            <p>Anime has inspired black artists, musicians, and creators, shaping modern culture.</p>
+        </div>
+        <div class="card" id="representation">
+            <img src="https://www.themarysue.com/wp-content/uploads/2022/01/Black-Voices-in-Anime.jpg?fit=1200%2C675" alt="Representation" class="card-img" onclick="changeImage('representation')">
+            <h3 class="hover-text">Representation</h3>
+            <p>Black characters and voices in animation have evolved, showcasing diversity and inclusion.</p>
+        </div>
+        <div class="card" id="food">
+            <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/10/1-Main-Feature-Photo.jpg" alt="Food & Fashion" class="card-img" onclick="changeImage('food')">
+            <h3 class="hover-text">Food & Fashion</h3>
+            <p>Anime has influenced trends in black culture, from ramen shops to streetwear.</p>
+        </div>
+    </section>
+
+    <script>
+        let clickCounts = {};
+        function changeImage(id) {
+            clickCounts[id] = (clickCounts[id] || 0) + 1;
+            const img = document.querySelector(`#${id} .card-img`);
+            if (clickCounts[id] > 5) {
+                img.style.filter = "grayscale(100%)";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
