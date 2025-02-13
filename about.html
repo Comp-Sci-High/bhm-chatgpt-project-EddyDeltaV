@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHMPA - Black History Month & Anime</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">BHMPA</a>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-item">Home</a></li>
+            <li><a href="#" class="nav-item">About</a></li>
+            <li><a href="#" class="nav-item">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="carousel-container">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="carousel">
+            <div class="carousel-item"><h3>Impact on Black Creators</h3><p>Anime has influenced black artists in music, art, and storytelling.</p></div>
+            <div class="carousel-item"><h3>Representation in Animation</h3><p>Black characters in anime have evolved over time.</p></div>
+            <div class="carousel-item"><h3>Cultural Exchange</h3><p>Anime has inspired black culture, fashion, and lifestyle.</p></div>
+        </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <header class="hero">
+        <h2>Anime & Animation's Impact on Black History</h2>
+    </header>
+<script>
+    let clickCounts = {};
+
+function changeImage(id) {
+clickCounts[id] = (clickCounts[id] || 0) + 1;
+const img = document.querySelector(`#${id} .card-img`);
+
+if (!img) {
+    console.error(`Image with id "${id}" not found.`);
+    return;
+}
+
+if (clickCounts[id] > 5) {
+    img.style.filter = "grayscale(100%)";
+}
+}
+
+</script>
+</body>
+</html>

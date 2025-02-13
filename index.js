@@ -1,3 +1,21 @@
+let currentSlide = 0;
+
+function moveSlide(direction) {
+    const carousel = document.querySelector(".carousel");
+    const slides = document.querySelectorAll(".carousel-item");
+    const totalSlides = slides.length;
+
+    currentSlide += direction;
+
+    if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    }
+
+    const offset = -currentSlide * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+}
 
 const express = require('express')
 const app = express() 
