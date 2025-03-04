@@ -1,9 +1,13 @@
-body {
+body { 
     margin: 0;
     font-family: Arial, sans-serif !important;
     background-color: #001f3f !important; /* Navy Blue Background */
     color: white !important;
     text-align: center !important;
+}
+
+h1, h2, h3, p, label {
+    color: white !important; /* Ensures all text is visible */
 }
 
 .navbar {
@@ -65,6 +69,7 @@ body {
     border-radius: 10px;
     width: 300px;
     text-align: center;
+    color: white !important; /* Ensures text inside the card is visible */
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2) !important;
     transition: transform 0.3s ease !important;
 }
@@ -88,6 +93,7 @@ body {
 .hover-text:hover {
     color: #ADD8E6 !important; /* Light Blue */
 }
+
 .carousel-container {
     position: relative;
     width: 60%;
@@ -106,6 +112,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    color: white !important; /* Ensures carousel text is visible */
 }
 
 .prev, .next {
